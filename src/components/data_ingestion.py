@@ -1,5 +1,3 @@
-# Reading data from any source
-
 import os
 import sys
 from src.exception import CustomException
@@ -27,7 +25,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
-            df=pd.read_csv('notebook\data\stud.csv')
+            df=pd.read_csv('/Users/naveenkumar/Desktop/Temp/ML-Project1/notebook/data/stud.csv')
             logging.info('Read the dataset as dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
